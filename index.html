@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f2ec" />
+  <meta name="description" content="Discos para ouvir com calma. Uma curadoria de vinis para descobrir e levar pra casa." />
+  <title>Melô — discos para ouvir com calma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="melo-overrides.css" />
+</head>
+<body>
+  <div class="announcement"><span>FRETE GRÁTIS A PARTIR DE R$ 300</span><span class="announcement-mark">✳</span><span>LAVADOS E DEVIDAMENTE EMBALADOS</span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="Melô início">mel<span>ô</span><i>●</i></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#discos">Discos</a><a href="#sobre">Sobre a loja</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Buscar discos" title="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+      <button class="cart-trigger" id="cartOpen"><span class="cart-label">Sacola</span><span class="cart-count" id="cartCount">0</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16l-1.4 12H5.4L4 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></button>
+    </div>
+  </header>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> ENTREGAMOS PARA TODO O BRASIL</p>
+        <h1 id="hero-title">O lado bom<br>de <em>ouvir.</em></h1>
+        <a class="button button-dark" href="#discos">Explorar discos <span>↘</span></a>
+      </div>
+      <div class="hero-art" aria-label="Composição gráfica de capas de discos e vinil">
+        <div class="hero-stamp">EDIÇÃO<br>DE ESCUTA<br><b>№ 001</b></div>
+        <div class="hero-sun"></div><div class="hero-record"><span></span></div>
+        <div class="hero-sleeve hero-sleeve-back"><span>RITMO<br>DE CASA</span><i></i></div>
+        <div class="hero-sleeve hero-sleeve-front"><div class="cover-sun"></div><span>sons<br>que ficam</span><small>MELÔ · 33⅓ RPM</small></div>
+        <div class="hero-caption"><span>FIG. 01</span> UMA BOA HISTÓRIA<br>COMEÇA COM UM BOM MELÔ</div>
+        <div class="hero-star">✳</div>
+      </div>
+    </section>
+    <section class="trust-strip" aria-label="Informações da loja"><div><span class="trust-icon">↗</span> ENVIO PARA TODO O BRASIL</div><div><span class="trust-icon">◉</span> PIX OU CARTÃO</div><div><span class="trust-icon">✳</span> LAVADOS E DEVIDAMENTE EMBALADOS</div></section>
+
+    <section class="catalog" id="discos">
+      <div class="catalog-heading">
+        <div><h2>Qual vai ser sua <span>melô</span><br class="mobile-break"> de hoje?</h2></div>
+        <button class="search-inline" id="searchButton"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>Buscar um disco</span><kbd>⌕</kbd></button>
+      </div>
+      <div class="catalog-controls"><div class="filter-list" role="group" aria-label="Filtrar discos por estilo"><button class="filter-chip active" data-filter="todos">Todos <span>11</span></button><button class="filter-chip" data-filter="brasil">Brasil</button><button class="filter-chip" data-filter="jazz">Jazz & soul</button><button class="filter-chip" data-filter="indie">Indie</button><button class="filter-chip" data-filter="samba">Samba</button><button class="filter-chip" data-filter="rock">Rock</button><button class="filter-chip" data-filter="classica">Clássica</button><button class="filter-chip" data-filter="trilhas">Trilhas</button><button class="filter-chip" data-filter="outros">Outros</button><button class="filter-chip" data-filter="novidades">Novidades <span class="new-dot"></span></button></div><label class="sort-label"><span>ORDENAR</span><select id="sortSelect" aria-label="Ordenar produtos"><option value="featured">Em destaque</option><option value="price-low">Menor preço</option><option value="price-high">Maior preço</option></select><b>⌄</b></label></div>
+      <div class="search-panel" id="searchPanel" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="searchInput" type="search" placeholder="Artista, álbum ou estilo…" aria-label="Buscar artista, álbum ou estilo"><button id="searchClose" aria-label="Fechar busca">✕</button></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="catalog-foot"><span id="catalogCount">11 / 11</span></div>
+    </section>
+
+    <section class="listening" id="sobre"><div class="listening-mark" aria-label="Melô"><span class="brand-word">mel<span>ô</span></span></div><div class="listening-content"><h2>Venda seu disco.<br><em>Eu compro.</em></h2><p>Entre em contato.</p><span class="text-link seller-link">Quero vender meus discos <span>↗</span></span></div><div class="listening-note"><div class="social-heading">SIGA NAS REDES</div><div class="social-icons" aria-label="Instagram e TikTok"><span class="instagram-mark" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2.5h9.6a4.7 4.7 0 0 1 4.7 4.7v9.6a4.7 4.7 0 0 1-4.7 4.7H7.2a4.7 4.7 0 0 1-4.7-4.7V7.2a4.7 4.7 0 0 1 4.7-4.7Zm4.8 4a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm5.7-.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/><path d="M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/></svg></span><span class="tiktok-mark" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h3.1c.2 2 1.4 3.7 3.7 4.3v3.2a9.1 9.1 0 0 1-3.7-1.2v6.2a6 6 0 1 1-6-6c.5 0 .9 0 1.3.1v3.4a2.7 2.7 0 1 0 1.6 2.5V3Z"/></svg></span></div><div class="note-lines"></div></div></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark footer-mark" href="#inicio">mel<span>ô</span><i>●</i></a><span>DISCOS PARA OUVIR COM CALMA.</span><span class="footer-contact">Fala com a gente ↗</span><small>© 2026 MELÔ · POR LUIS CARIBE</small></footer>
+
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Sua sacola" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">SUA SELEÇÃO</p><h2>Sacola <span id="drawerCount">(0)</span></h2></div><button id="cartClose" class="close-button" aria-label="Fechar sacola">×</button></div>
+    <div class="cart-content" id="cartContent"></div>
+    <div class="cart-empty" id="cartEmpty"><div class="empty-record"></div><h3>Ainda sem trilha sonora.</h3><p>Seu próximo disco favorito está por aqui.</p><button class="button button-dark" id="backToShop">Explorar discos <span>↗</span></button></div>
+    <div class="cart-bottom" id="cartBottom" hidden>
+      <div class="shipping-box"><label for="cepInput">Calcule o frete <span>ENTREGA NO SEU ENDEREÇO</span></label><div class="cep-row"><input id="cepInput" inputmode="numeric" maxlength="9" placeholder="Seu CEP" aria-label="Seu CEP"><button id="calcShipping">Calcular</button></div><p id="shippingResult" class="shipping-result">Frete grátis em pedidos acima de R$ 300.</p></div>
+      <div class="subtotal-row"><span>Subtotal</span><strong id="subtotalValue">R$ 0,00</strong></div><div class="shipping-total"><span>Entrega</span><span id="shippingValue">Calculada no próximo passo</span></div>
+      <button class="button button-red checkout-button" id="checkoutButton">Continuar para pagamento <span>→</span></button>
+      <p class="secure-note">COMPRA SEGURA · PIX OU CARTÃO</p>
+    </div>
+  </aside>
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true"><div class="modal-card"><button class="close-button modal-close" id="modalClose" aria-label="Fechar">×</button><div id="checkoutForm"><p class="eyebrow">QUASE LÁ</p><h2>Entrega e pagamento.</h2><p class="modal-intro">Um checkout de demonstração. Nenhum pagamento será processado.</p><div class="checkout-fields"><label>Seu nome<input placeholder="Como podemos te chamar?"></label><label>E-mail<input type="email" placeholder="voce@email.com.br"></label><label>CEP<input id="checkoutCep" inputmode="numeric" placeholder="00000-000"></label></div><div class="payment-choice"><span>FORMA DE PAGAMENTO</span><label><input type="radio" name="payment" checked> Pix <small>5% de desconto</small></label><label><input type="radio" name="payment"> Cartão de crédito <small>até 3x sem juros</small></label></div><button class="button button-red" id="placeOrder">Finalizar pedido <span>→</span></button><p class="demo-note">Protótipo visual · integração de pagamento e cálculo real de frete entram numa próxima etapa.</p></div><div class="order-success" id="orderSuccess" hidden><div class="success-icon">✓</div><p class="eyebrow">PEDIDO DE TESTE</p><h2>Feito. Agora é só dar o play.</h2><p>Este protótipo não enviou um pedido real. Quando conectarmos os pagamentos, esta será a confirmação da sua compra.</p><button class="button button-dark" id="finishOrder">Voltar para a loja <span>↗</span></button></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="mobile-cart-bar" id="mobileCartBar"><span><b id="mobileCount">0</b> discos · <strong id="mobileTotal">R$ 0,00</strong></span><button id="mobileCartOpen">Ver sacola <span>→</span></button></div>
+  <script src="app.js"></script>
+</body>
+</html>
