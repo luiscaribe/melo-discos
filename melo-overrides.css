@@ -31,5 +31,16 @@
 .sleeve.outros{background:#e84832;color:#fff4df}
 .sleeve.outros .cover-title{left:9%;top:11%;font-size:clamp(18px,2.2vw,28px);line-height:.85;letter-spacing:-.09em}
 .sleeve.outros .disc-art{position:absolute;width:58%;height:58%;right:6%;bottom:6%;border-radius:50%;background:repeating-conic-gradient(#f3c528 0 10deg,#e84832 10deg 20deg);box-shadow:inset 0 0 0 13px #e84832}
+.site-header{position:relative;z-index:9;grid-template-columns:1fr auto 1fr}
+.site-header>.wordmark{grid-column:2;justify-self:center}
+.menu-toggle{justify-self:start;border:0;background:none;padding:5px 9px;font:28px/1 var(--sans);cursor:pointer}
+.site-menu{position:absolute;z-index:12;top:calc(30px + 76px);left:6.25%;min-width:180px;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);box-shadow:0 14px 32px #0002;padding:7px}
+.site-menu[hidden]{display:none}
+.site-menu a{padding:12px 13px;color:var(--ink);text-decoration:none;font-size:12px;font-weight:600}
+.site-menu a:hover{background:#eeece5;color:var(--red)}
+.hero-sleeve-front span{text-transform:none}
+.hero-caption{max-width:55%;line-height:1.6}
+.cart-empty[hidden]{display:none!important}
+.empty-record:after{content:"M"}
 @media(max-width:900px){.listening-mark{width:77px;height:66px;font-size:22px}}
-@media(max-width:650px){.wordmark{font-size:22px}.hero-copy>.button{margin-top:19px}.mobile-break{display:inline}.listening{grid-template-columns:58px 1fr;gap:14px}.listening-mark{width:56px;height:48px;font-size:16px;transform:rotate(-5deg)}.listening-note{grid-column:2;border-top:1px solid #c8c5bc;margin-top:12px;padding:13px 0 0;min-height:68px}.social-heading{font-size:7px;margin-bottom:8px}.social-icons{gap:8px}.social-icons>span{width:29px;height:29px}.social-icons svg{width:22px;height:22px}.social-icons+.note-lines{width:70px;height:70px;right:0;bottom:-28px}}
+@media(max-width:650px){.site-header{grid-template-columns:1fr auto 1fr}.site-header>.wordmark{font-size:22px}.site-menu{top:calc(27px + 61px);left:19px}.hero-caption{max-width:58%}.hero-copy>.button{margin-top:19px}.mobile-break{display:inline}.listening{grid-template-columns:58px 1fr;gap:14px}.listening-mark{width:56px;height:48px;font-size:16px;transform:rotate(-5deg)}.listening-note{grid-column:2;border-top:1px solid #c8c5bc;margin-top:12px;padding:13px 0 0;min-height:68px}.social-heading{font-size:7px;margin-bottom:8px}.social-icons{gap:8px}.social-icons>span{width:29px;height:29px}.social-icons svg{width:22px;height:22px}.social-icons+.note-lines{width:70px;height:70px;right:0;bottom:-28px}}

@@ -17,6 +17,19 @@ const cart = new Map();
 let activeFilter = "todos";
 let shipping = null;
 let toastTimer;
+const menuToggle = document.getElementById("menuToggle");
+const siteMenu = document.getElementById("siteMenu");
+
+function setMenuOpen(open) {
+  siteMenu.hidden = !open;
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+}
+menuToggle.addEventListener("click", () => setMenuOpen(siteMenu.hidden));
+siteMenu.addEventListener("click", e => { if (e.target.closest("a")) setMenuOpen(false); });
+document.addEventListener("click", e => {
+  if (!e.target.closest(".site-header") && !e.target.closest("#siteMenu")) setMenuOpen(false);
+});
 
 function coverMarkup(product) {
   const titles = { bebel:"TANTO\nTEMPO", joao:"AMOROSO", nina:"LITTLE GIRL\nBLUE", tim:"RACIONAL\nVOL. 1", gal:"ÍNDIA", bad:"IV" };
@@ -81,7 +94,7 @@ document.getElementById("mobileCartOpen").addEventListener("click", openCart);
 document.getElementById("cartClose").addEventListener("click", closeCart);
 document.getElementById("drawerScrim").addEventListener("click", closeCart);
 document.getElementById("backToShop").addEventListener("click", closeCart);
-document.addEventListener("keydown", e => { if (e.key === "Escape") { closeCart(); closeCheckout(); } });
+document.addEventListener("keydown", e => { if (e.key === "Escape") { closeCart(); closeCheckout(); setMenuOpen(false); } });
 document.getElementById("cepInput").addEventListener("input", e => { let v = e.target.value.replace(/\D/g,"").slice(0,8); if(v.length>5) v=v.slice(0,5)+"-"+v.slice(5); e.target.value=v; });
 document.getElementById("calcShipping").addEventListener("click", () => {
   const cep = document.getElementById("cepInput").value.replace(/\D/g,""); const output = document.getElementById("shippingResult");
